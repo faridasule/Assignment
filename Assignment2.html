@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chessboard(size){
+        let board = "";
+        for (let i = 0; i < size; i++){ // loop through  the rows
+            for (let j = 0; j < size; j++){ // loop through  the columns
+                if ((i + j) % 2 == 0){ // checking if row + column is even
+                    board += " ";
+                }else{
+                    board += "#";
+                }
+            }
+            board += "\n"; // add newline for each row
+        }
+        return board;
+    }
+   console.log(chessboard(8));
+
+    </script>
+</body>
+</html>
